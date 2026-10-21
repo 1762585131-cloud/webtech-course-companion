@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curriculum — Web Technology</title>
+  <meta name="description" content="Eight modules on web fundamentals, HTML, CSS, JavaScript, project development, publishing, web security, and working with AI tools.">
+  <meta name="theme-color" content="#f3f0e7">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Webtech home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><path d="M7 10l5 16 6-12 6 12 5-16" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+        </span>
+        <span class="brand-name">webtech<span class="brand-dot">.</span></span>
+      </a>
+      <p class="header-note">Web Technology <span>/</span> Course companion</p>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="nav-toggle-text" data-nav-text>Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul class="site-nav-list">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="curriculum.html" aria-current="page">Curriculum</a></li>
+          <li><a href="project.html">Project</a></li>
+          <li><a href="code-review.html">Code review</a></li>
+          <li><a href="field-guide.html">Field guide</a></li>
+        </ul>
+        <a class="site-nav-cta" href="#modules">
+          Explore modules
+          <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="shell">
+        <div class="page-hero-top">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Overview</a></li>
+              <li aria-current="page">Curriculum</li>
+            </ol>
+          </nav>
+          <span class="page-code">CH. 01 / 8 modules</span>
+        </div>
+        <div class="page-hero-grid">
+          <div>
+            <p class="eyebrow"><span>01</span> Curriculum</p>
+            <h1 class="page-title" id="page-title">The whole stack, <span class="serif">in eight moves.</span></h1>
+            <p class="page-lede">From DNS to deployment. Each module pairs a fundamental idea with a studio task that feeds the website you are building — and ends with a reason to review the result.</p>
+          </div>
+          <aside class="page-hero-aside" aria-labelledby="stack-title">
+            <div class="stack-card">
+              <p class="stack-card-head" id="stack-title">The course in three layers</p>
+              <div class="stack-layer">
+                <span>01</span>
+                <p>Build the page</p>
+                <small>HTML &middot; CSS &middot; JavaScript</small>
+              </div>
+              <div class="stack-layer">
+                <span>02</span>
+                <p>Put it online</p>
+                <small>Git &middot; Deployment &middot; SEO</small>
+              </div>
+              <div class="stack-layer">
+                <span>03</span>
+                <p>Question the work</p>
+                <small>Security &middot; AI review</small>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="filter-shell">
+      <div class="shell">
+        <div class="filter-bar" data-module-filter>
+          <span class="filter-label">Filter modules</span>
+          <div class="filter-chips" role="group" aria-label="Filter modules by track">
+            <button class="chip" type="button" data-filter="all" aria-pressed="true">All modules <span>08</span></button>
+            <button class="chip" type="button" data-filter="foundations" aria-pressed="false">Foundations <span>01</span></button>
+            <button class="chip" type="button" data-filter="frontend" aria-pressed="false">Front-end <span>03</span></button>
+            <button class="chip" type="button" data-filter="build" aria-pressed="false">Build <span>02</span></button>
+            <button class="chip" type="button" data-filter="judgment" aria-pressed="false">Judgment <span>02</span></button>
+          </div>
+          <p class="filter-count" aria-live="polite" data-filter-count>Showing all 8 modules</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="modules-section" id="modules" aria-labelledby="modules-title">
+      <div class="shell">
+        <h2 class="visually-hidden" id="modules-title">Course modules</h2>
+        <ol class="module-list" data-module-list>
+          <li class="module" id="module-01" data-track="foundations">
+            <article class="module-row" aria-labelledby="module-01-title">
+              <div class="module-index">
+                <span class="module-number">01</span>
+                <span class="module-track">Foundations</span>
+              </div>
+              <div class="module-main">
+                <p class="module-meta">M01 / The system</p>
+                <h2 id="module-01-title">Web fundamentals</h2>
+                <p class="module-summary">Start with the machine, not the syntax. Follow one request from the address bar to the pixels, and learn to use the browser's own tools to see what is really happening.</p>
+                <ul class="topic-list" aria-label="Topics in module 1">
+                  <li>Client&ndash;server model</li>
+                  <li>URLs</li>
+                  <li>DNS</li>
+                  <li>HTTP &amp; status codes</li>
+                  <li>Browsers &amp; DevTools</li>
+                  <li>Web standards</li>
+                </ul>
+                <details class="module-details">
+                  <summary>What this module unlocks</summary>
+                  <div class="module-details-body">
+                    <p><strong>Learning outcome.</strong> Explain how the web delivers a page &mdash; from address, through DNS and a server, to rendered pixels &mdash; and say which layer is responsible for which part of the result.</p>
+                    <p><strong>Key question.</strong> What actually happens in the seconds after you press Enter?</p>
+                  </div>
+                </details>
+              </div>
+              <div class="module-aside">
+                <div class="studio-card">
+                  <p class="studio-label">Studio exercise</p>
+                  <p>Follow one real URL through all four layers. For each layer, name a tool you would reach for when it fails.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="module" id="module-02" data-track="frontend">
+            <article class="module-row" aria-labelledby="module-02-title">
+              <div class="module-index">
+                <span class="module-number">02</span>
+                <span class="module-track">HTML</span>
+              </div>
+              <div class="module-main">
+                <p class="module-meta">M02 / Structure &amp; meaning</p>
+                <h2 id="module-02-title">HTML</h2>
+                <p class="module-summary">Learn HTML as a description of meaning. Build documents that make sense to a screen reader, a search engine, and the next developer &mdash; before you add a single style.</p>
+                <ul class="topic-list" aria-label="Topics in module 2">
+                  <li>Document structure</li>
+                  <li>Semantics</li>
+                  <li>Text &amp; links</li>
+                  <li>Images</li>
+                  <li>Tables</li>
+                  <li>Forms &amp; validation</li>
+                  <li>Accessibility</li>
+                </ul>
+                <details class="module-details">
+                  <summary>What this module unlocks</summary>
+                  <div class="module-details-body">
+                    <p><strong>Learning outcome.</strong> Write and read HTML that describes what content is, not only how it looks, including accessible and semantically correct markup.</p>
+                    <p><strong>Key question.</strong> If the CSS disappears, does the page still make sense?</p>
+                  </div>
+                </details>
+              </div>
+              <div class="module-aside">
+                <div class="studio-card studio-card--html">
+                  <p class="studio-label">Studio exercise</p>
+                  <p>Mark up a complete page using elements that say what the content is. Then navigate it with a keyboard only.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="module" id="module-03" data-track="frontend">
+            <article class="module-row" aria-labelledby="module-03-title">
+              <div class="module-index">
+                <span class="module-number">03</span>
+                <span class="module-track">CSS</span>
+              </div>
+              <div class="module-main">
+                <p class="module-meta">M03 / The surface</p>
+                <h2 id="module-03-title">CSS</h2>
+                <p class="module-summary">Understand why styles land where they do. Then use the box model, Flexbox, Grid, and media queries to make the same page work at 360 pixels and 1440 pixels.</p>
+                <ul class="topic-list" aria-label="Topics in module 3">
+                  <li>Syntax &amp; selectors</li>
+                  <li>Cascade &amp; specificity</li>
+                  <li>Box model</li>
+                  <li>Flexbox</li>
+                  <li>Grid</li>
+                  <li>Responsive design</li>
+                </ul>
+                <details class="module-details">
+                  <summary>What this module unlocks</summary>
+                  <div class="module-details-body">
+                    <p><strong>Learning outcome.</strong> Style and lay out pages with CSS &mdash; including the box model, Flexbox, Grid, and responsive design for phone and desktop.</p>
+                    <p><strong>Key question.</strong> Why did that rule win?</p>
+                  </div>
+                </details>
+              </div>
+              <div class="module-aside">
+                <div class="studio-card studio-card--css">
+                  <p class="studio-label">Studio exercise</p>
+                  <p>Rebuild one layout twice: once at phone width, once on desktop. Explain every breakpoint in a single sentence.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="module" id="module-04" data-track="frontend">
+            <article class="module-row" aria-labelledby="module-04-title">
+              <div class="module-index">
+                <span class="module-number">04</span>
+                <span class="module-track">JavaScript</span>
+              </div>
+              <div class="module-main">
+                <p class="module-meta">M04 / Behaviour</p>
+                <h2 id="module-04-title">JavaScript</h2>
+                <p class="module-summary">Make the page respond. Use the DOM and events to build interactions, validate forms, and manage state without losing the plot when the interface grows.</p>
+                <ul class="topic-list" aria-label="Topics in module 4">
+                  <li>Variables &amp; types</li>
+                  <li>Functions</li>
+                  <li>The DOM</li>
+                  <li>Events</li>
+                  <li>Form validation</li>
+                  <li>Interactivity</li>
+                  <li>Managing state</li>
+                </ul>
+                <details class="module-details">
+                  <summary>What this module unlocks</summary>
+                  <div class="module-details-body">
+                    <p><strong>Learning outcome.</strong> Add behaviour with JavaScript &mdash; the DOM, events, and managed state &mdash; in a way another person can follow.</p>
+                    <p><strong>Key question.</strong> What state does this interface need, and where does it live?</p>
+                  </div>
+                </details>
+              </div>
+              <div class="module-aside">
+                <div class="studio-card studio-card--js">
+                  <p class="studio-label">Studio exercise</p>
+                  <p>Build a form that tells the user what went wrong, in plain language, before they can submit.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="module" id="module-05" data-track="build">
+            <article class="module-row" aria-labelledby="module-05-title">
+              <div class="module-index">
+                <span class="module-number">05</span>
+                <span class="module-track">Build</span>
+              </div>
+              <div class="module-main">
+                <p class="module-meta">M05 / From exercises to a site</p>
+                <h2 id="module-05-title">Project development</h2>
+                <p class="module-summary">Move from isolated exercises to a real site. Define the idea, map the pages, sketch the wireframes, gather the media, and test the thing like someone else's work.</p>
+                <ul class="topic-list" aria-label="Topics in module 5">
+                  <li>Planning</li>
+                  <li>Wireframing</li>
+                  <li>Structure &amp; navigation</li>
+                  <li>Media</li>
+                  <li>Testing</li>
+                  <li>Debugging</li>
+                </ul>
+                <details class="module-details">
+                  <summary>What this module unlocks</summary>
+                  <div class="module-details-body">
+                    <p><strong>Learning outcome.</strong> Plan, build, deliver, and defend a complete website of your own design, with navigation that works and content worth reading.</p>
+                    <p><strong>Key question.</strong> What is the smallest site that does this idea justice?</p>
+                  </div>
+                </details>
+              </div>
+              <div class="module-aside">
+                <div class="studio-card studio-card--build">
+                  <p class="studio-label">Studio exercise</p>
+                  <p>Write a one-sentence brief, draw a five-box sitemap, and save three references you are not copying.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="module" id="module-06" data-track="build">
+            <article class="module-row" aria-labelledby="module-06-title">
+              <div class="module-index">
+                <span class="module-number">06</span>
+                <span class="module-track">Publishing</span>
+              </div>
+              <div class="module-main">
+                <p class="module-meta">M06 / Out of localhost</p>
+                <h2 id="module-06-title">Publishing</h2>
+                <p class="module-summary">Put the work on the internet, properly. Prepare the files, commit a meaningful history, deploy to a live address, connect a domain, and help people find what you made.</p>
+                <ul class="topic-list" aria-label="Topics in module 6">
+                  <li>Preparing files</li>
+                  <li>Git &amp; GitHub</li>
+                  <li>Deployment</li>
+                  <li>Domains</li>
+                  <li>Basic SEO</li>
+                </ul>
+                <details class="module-details">
+                  <summary>What this module unlocks</summary>
+                  <div class="module-details-body">
+                    <p><strong>Learning outcome.</strong> Publish and operate a website: version control, deployment to a live address, and diagnosing faults across layers.</p>
+                    <p><strong>Key question.</strong> When the live site differs from your computer, which layer changed?</p>
+                  </div>
+                </details>
+              </div>
+              <div class="module-aside">
+                <div class="studio-card studio-card--build">
+                  <p class="studio-label">Studio exercise</p>
+                  <p>Ship a real page, connect a URL, and write a README your future self can follow at 11pm.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="module" id="module-07" data-track="judgment">
+            <article class="module-row" aria-labelledby="module-07-title">
+              <div class="module-index">
+                <span class="module-number">07</span>
+                <span class="module-track">Security</span>
+              </div>
+              <div class="module-main">
+                <p class="module-meta">M07 / Trust boundaries</p>
+                <h2 id="module-07-title">Web security</h2>
+                <p class="module-summary">Treat the web as a hostile place for a moment. Learn what HTTPS protects, where passwords should live, and how XSS and CSRF sneak into ordinary-looking pages.</p>
+                <ul class="topic-list" aria-label="Topics in module 7">
+                  <li>HTTPS</li>
+                  <li>Secure password handling</li>
+                  <li>XSS awareness</li>
+                  <li>CSRF awareness</li>
+                  <li>Security-first defaults</li>
+                </ul>
+                <details class="module-details">
+                  <summary>What this module unlocks</summary>
+                  <div class="module-details-body">
+                    <p><strong>Learning outcome.</strong> Recognise common web security failures and design safer defaults, even on a site with no backend.</p>
+                    <p><strong>Key question.</strong> What can a visitor control, and where does that input go?</p>
+                  </div>
+                </details>
+              </div>
+              <div class="module-aside">
+                <div class="studio-card studio-card--trust">
+                  <p class="studio-label">Studio exercise</p>
+                  <p>Review three everyday patterns &mdash; a login form, a comment box, a settings page &mdash; and mark the trust boundary in each.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="module" id="module-08" data-track="judgment">
+            <article class="module-row" aria-labelledby="module-08-title">
+              <div class="module-index">
+                <span class="module-number">08</span>
+                <span class="module-track">AI review</span>
+              </div>
+              <div class="module-main">
+                <p class="module-meta">M08 / The central skill</p>
+                <h2 id="module-08-title">Working with AI tools</h2>
+                <p class="module-summary">AI is a fast typist with no context. Learn to specify precisely, question assumptions, verify behaviour, and correct generated code before it reaches users.</p>
+                <ul class="topic-list" aria-label="Topics in module 8">
+                  <li>Specifying</li>
+                  <li>Verifying</li>
+                  <li>Correcting</li>
+                  <li>Reviewing generated code</li>
+                  <li>Accountability</li>
+                </ul>
+                <details class="module-details">
+                  <summary>What this module unlocks</summary>
+                  <div class="module-details-body">
+                    <p><strong>Learning outcome.</strong> Judge code you did not write, including code produced by AI tools &mdash; for correctness, accessibility, safety, and fit.</p>
+                    <p><strong>Key question.</strong> What would you have to prove before putting your name on this code?</p>
+                  </div>
+                </details>
+              </div>
+              <div class="module-aside">
+                <div class="studio-card studio-card--trust">
+                  <p class="studio-label">Studio exercise</p>
+                  <p>Take an AI-generated feature from prompt to production review. Document what you changed and why.</p>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section--tint method-section" aria-labelledby="method-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span>02</span> How it works</p>
+            <h2 class="section-title" id="method-title">Read. Make. <span class="serif">Review.</span></h2>
+          </div>
+          <p class="section-intro">The sequence is deliberate. Understanding without making is hollow; making without reviewing is how broken interfaces ship.</p>
+        </div>
+        <div class="method-grid">
+          <div class="method">
+            <span class="method-number">01 / READ</span>
+            <h3>See the idea.</h3>
+            <p>Concise explanations and examples connect each concept to the full lesson material and to the web you already use.</p>
+          </div>
+          <div class="method">
+            <span class="method-number">02 / MAKE</span>
+            <h3>Build the thing.</h3>
+            <p>Every module ends in a studio task. Nothing is theoretical for long: the work feeds directly into your site.</p>
+          </div>
+          <div class="method">
+            <span class="method-number">03 / REVIEW</span>
+            <h3>Judge the result.</h3>
+            <p>Test against the brief, accessibility, and the layers underneath. Ask what works, what is fragile, and what you would change.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="curriculum-cta-title">
+      <div class="shell">
+        <div class="curriculum-cta">
+          <div>
+            <p class="eyebrow"><span>03</span> Keep going</p>
+            <h2 id="curriculum-cta-title">The modules are the map. The project is the territory.</h2>
+            <p>Everything you learn here converges on one brief: a complete, accessible, responsive site at a live address, with a Git history that shows the work developing.</p>
+          </div>
+          <a class="button" href="project.html">
+            Open the project brief
+            <span class="button-icon" aria-hidden="true">
+              <svg class="icon-arrow" viewBox="0 0 16 16"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Webtech home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 36 36"><path d="M7 10l5 16 6-12 6 12 5-16" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+            </span>
+            <span class="brand-name">webtech<span class="brand-dot">.</span></span>
+          </a>
+          <p class="footer-tagline">A course companion for learning the web in full: the craft of building it, the discipline of shipping it, and the judgment to question it.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h2 class="footer-heading">Explore</h2>
+            <ul>
+              <li><a href="curriculum.html">Curriculum</a></li>
+              <li><a href="project.html">Project brief</a></li>
+              <li><a href="code-review.html">Code review studio</a></li>
+              <li><a href="field-guide.html">Field guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Reference</h2>
+            <ul>
+              <li><a href="https://webtech.landrock.io/" rel="external">Full lesson material</a></li>
+              <li><a href="https://developer.mozilla.org/" rel="external">MDN Web Docs</a></li>
+              <li><a href="https://web.dev/learn" rel="external">web.dev Learn</a></li>
+              <li><a href="https://validator.w3.org/" rel="external">W3C validator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Webtech course companion. An original site built around the course outline.</p>
+        <p>Hand-built with HTML, CSS &amp; JavaScript. No frameworks. No build step.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

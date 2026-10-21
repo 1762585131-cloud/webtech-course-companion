@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Technology — Build for the web. Then judge what you built.</title>
+  <meta name="description" content="A hands-on web technology course: HTML, CSS, JavaScript, publishing, security, and the judgment to review code you did not write. Build a four-page site of your own.">
+  <meta name="theme-color" content="#f3f0e7">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Webtech home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><path d="M7 10l5 16 6-12 6 12 5-16" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+        </span>
+        <span class="brand-name">webtech<span class="brand-dot">.</span></span>
+      </a>
+      <p class="header-note">Web Technology <span>/</span> Course companion</p>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="nav-toggle-text" data-nav-text>Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul class="site-nav-list">
+          <li><a href="index.html" aria-current="page">Overview</a></li>
+          <li><a href="curriculum.html">Curriculum</a></li>
+          <li><a href="project.html">Project</a></li>
+          <li><a href="code-review.html">Code review</a></li>
+          <li><a href="field-guide.html">Field guide</a></li>
+        </ul>
+        <a class="site-nav-cta" href="curriculum.html#modules">
+          Start learning
+          <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span>WT</span> Web Technology / Course companion</p>
+            <h1 class="hero-title" id="hero-title">Build for the web.<br> <span class="serif">Then judge what</span><br> you built.</h1>
+            <p class="hero-lede">Go from a URL in the address bar to a website you designed, built, and can defend. Learn the craft of HTML, CSS, and JavaScript — and the skill AI makes more valuable: knowing what good code is.</p>
+            <div class="hero-actions">
+              <a class="button" href="curriculum.html">
+                Explore the curriculum
+                <span class="button-icon" aria-hidden="true">
+                  <svg class="icon-arrow" viewBox="0 0 16 16"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+                </span>
+              </a>
+              <a class="button button--ghost" href="project.html">
+                Read the project brief
+                <span class="button-icon" aria-hidden="true">
+                  <svg class="icon-arrow" viewBox="0 0 16 16"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+                </span>
+              </a>
+            </div>
+            <dl class="hero-facts">
+              <div>
+                <dt>Modules</dt>
+                <dd>08</dd>
+              </div>
+              <div>
+                <dt>Pages you ship</dt>
+                <dd>04+</dd>
+              </div>
+              <div>
+                <dt>Live addresses</dt>
+                <dd>01</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-visual">
+            <div class="lifecycle" data-lifecycle>
+              <div class="lifecycle-top">
+                <span>Request lifecycle</span>
+                <span class="lifecycle-status">HTTP/2</span>
+              </div>
+              <div class="lifecycle-query" aria-hidden="true">
+                <span>GET</span>
+                <span>/your-first-site</span>
+                <span class="lifecycle-query-arrow">&#8594;</span>
+              </div>
+              <div class="stage-tabs" role="tablist" aria-label="How a web page is delivered" aria-orientation="vertical">
+                <button class="stage-tab" id="stage-tab-1" type="button" role="tab" aria-label="Address: URL to request" aria-selected="true" aria-controls="stage-panel" tabindex="0" data-stage="address">
+                  <span class="stage-tab-number">01</span>
+                  <span class="stage-tab-content"><span class="stage-tab-name">Address</span><span class="stage-tab-hint">URL &#8594; request</span></span>
+                  <span class="stage-tab-mark" aria-hidden="true"></span>
+                </button>
+                <button class="stage-tab" id="stage-tab-2" type="button" role="tab" aria-label="DNS: name to IP address" aria-selected="false" aria-controls="stage-panel" tabindex="-1" data-stage="dns">
+                  <span class="stage-tab-number">02</span>
+                  <span class="stage-tab-content"><span class="stage-tab-name">DNS</span><span class="stage-tab-hint">name &#8594; IP</span></span>
+                  <span class="stage-tab-mark" aria-hidden="true"></span>
+                </button>
+                <button class="stage-tab" id="stage-tab-3" type="button" role="tab" aria-label="Server: status and files" aria-selected="false" aria-controls="stage-panel" tabindex="-1" data-stage="server">
+                  <span class="stage-tab-number">03</span>
+                  <span class="stage-tab-content"><span class="stage-tab-name">Server</span><span class="stage-tab-hint">status + files</span></span>
+                  <span class="stage-tab-mark" aria-hidden="true"></span>
+                </button>
+                <button class="stage-tab" id="stage-tab-4" type="button" role="tab" aria-label="Pixels: parse and paint" aria-selected="false" aria-controls="stage-panel" tabindex="-1" data-stage="pixels">
+                  <span class="stage-tab-number">04</span>
+                  <span class="stage-tab-content"><span class="stage-tab-name">Pixels</span><span class="stage-tab-hint">parse &#8594; paint</span></span>
+                  <span class="stage-tab-mark" aria-hidden="true"></span>
+                </button>
+              </div>
+              <div class="stage-panel" id="stage-panel" role="tabpanel" aria-labelledby="stage-tab-1" tabindex="0">
+                <p class="stage-panel-kicker" data-stage-kicker>Layer 01 / The ask</p>
+                <h2 class="stage-panel-title" data-stage-title>Every page starts as an address.</h2>
+                <p class="stage-panel-copy" data-stage-copy>The browser parses the protocol, host, path, and query. That tells it what to ask for, from whom, and over which scheme.</p>
+                <code class="stage-panel-code" data-stage-code>https://yourname.site/work?ref=course</code>
+              </div>
+              <div class="lifecycle-foot">
+                <span>Four layers. Four kinds of bugs.</span>
+                <a href="curriculum.html#module-01">Trace the stack &#8594;</a>
+              </div>
+            </div>
+            <p class="hero-caption"><span aria-hidden="true">&#8627;</span> The whole journey, from the first module onward.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>Semantics, not divs</span><span class="marquee-star">&#10033;</span>
+          <span>Layouts that bend</span><span class="marquee-star">&#10033;</span>
+          <span>Behaviour with intent</span><span class="marquee-star">&#10033;</span>
+          <span>Code you can defend</span><span class="marquee-star">&#10033;</span>
+          <span>Pages that go live</span><span class="marquee-star">&#10033;</span>
+        </div>
+        <div class="marquee-group">
+          <span>Semantics, not divs</span><span class="marquee-star">&#10033;</span>
+          <span>Layouts that bend</span><span class="marquee-star">&#10033;</span>
+          <span>Behaviour with intent</span><span class="marquee-star">&#10033;</span>
+          <span>Code you can defend</span><span class="marquee-star">&#10033;</span>
+          <span>Pages that go live</span><span class="marquee-star">&#10033;</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="outcomes-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span>01</span> Learning outcomes</p>
+            <h2 class="section-title" id="outcomes-title">More than a working page. <span class="serif">A way of thinking.</span></h2>
+          </div>
+          <p class="section-intro">Seven things you will be able to do by the end — each one tied to something you have made, shipped, or reviewed yourself.</p>
+        </div>
+
+        <ol class="outcome-list" aria-label="Learning outcomes">
+          <li class="outcome">
+            <div class="outcome-top"><span class="outcome-number">01</span><span class="outcome-tag">Systems</span></div>
+            <h3>Trace a page through every layer</h3>
+            <p>Explain how the web delivers a page — from address, through DNS and a server, to rendered pixels — and say which layer owns which part of the result.</p>
+          </li>
+          <li class="outcome">
+            <div class="outcome-top"><span class="outcome-number">02</span><span class="outcome-tag">HTML</span></div>
+            <h3>Write markup that means something</h3>
+            <p>Read and write HTML that describes what content is, not only how it looks, with accessible, semantically correct structure.</p>
+          </li>
+          <li class="outcome">
+            <div class="outcome-top"><span class="outcome-number">03</span><span class="outcome-tag">CSS</span></div>
+            <h3>Lay out for any screen</h3>
+            <p>Style and lay out pages with CSS — the box model, Flexbox, Grid, and responsive design — for a phone and a desktop.</p>
+          </li>
+          <li class="outcome">
+            <div class="outcome-top"><span class="outcome-number">04</span><span class="outcome-tag">JavaScript</span></div>
+            <h3>Add behaviour, not chaos</h3>
+            <p>Use JavaScript to work with the DOM, events, and state, and make interactions that remain understandable when things change.</p>
+          </li>
+          <li class="outcome">
+            <div class="outcome-top"><span class="outcome-number">05</span><span class="outcome-tag">Publishing</span></div>
+            <h3>Put it live</h3>
+            <p>Use version control, deploy to a real address, and diagnose faults across layers instead of guessing at the symptom.</p>
+          </li>
+          <li class="outcome">
+            <div class="outcome-top"><span class="outcome-number">06</span><span class="outcome-tag">Judgment</span></div>
+            <h3>Judge code you did not write</h3>
+            <p>Review code from humans and AI tools for correctness, accessibility, security, and fit — the central skill of the course.</p>
+          </li>
+          <li class="outcome outcome--feature">
+            <div class="outcome-top"><span class="outcome-number">07</span><span class="outcome-tag">Studio</span></div>
+            <h3>Build and defend a site of your own.</h3>
+            <p>Plan, build, deliver, and defend a complete website of your own design — four pages minimum, live at a real address, with the Git history to prove how it got there.</p>
+          </li>
+        </ol>
+
+        <div class="outcomes-foot">
+          <p>Seven outcomes. One cumulative project.</p>
+          <a class="link-arrow" href="curriculum.html">
+            See how the modules build them
+            <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="path-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span>02</span> The path</p>
+            <h2 class="section-title" id="path-title">Eight modules, one site <span class="serif">taking shape.</span></h2>
+          </div>
+          <p class="section-intro">No disconnected exercises. Each module adds a layer to the same website — and a new reason to question what you built.</p>
+        </div>
+
+        <div class="act-grid">
+          <a class="act" href="curriculum.html#module-01">
+            <div class="act-top">
+              <span>01—02</span>
+              <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>
+            </div>
+            <h3>See the system</h3>
+            <p>Start with the journey from URL to pixels, then write markup that gives the content meaning.</p>
+            <ul class="act-list"><li>Web fundamentals</li><li>HTML</li></ul>
+          </a>
+          <a class="act" href="curriculum.html#module-03">
+            <div class="act-top">
+              <span>03</span>
+              <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>
+            </div>
+            <h3>Shape the surface</h3>
+            <p>Take control of the cascade, the box model, Flexbox, Grid, and every screen in between.</p>
+            <ul class="act-list"><li>CSS</li><li>Responsive design</li></ul>
+          </a>
+          <a class="act" href="curriculum.html#module-04">
+            <div class="act-top">
+              <span>04</span>
+              <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>
+            </div>
+            <h3>Make it respond</h3>
+            <p>Use the DOM, events, and state to turn a static document into an interface people can use.</p>
+            <ul class="act-list"><li>JavaScript</li><li>Interactivity</li></ul>
+          </a>
+          <a class="act" href="curriculum.html#module-05">
+            <div class="act-top">
+              <span>05—06</span>
+              <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>
+            </div>
+            <h3>Make it real</h3>
+            <p>Plan and test the full site, then publish it with a live address and a history worth reading.</p>
+            <ul class="act-list"><li>Project development</li><li>Publishing</li></ul>
+          </a>
+          <a class="act act--accent" href="curriculum.html#module-07">
+            <div class="act-top">
+              <span>07—08</span>
+              <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>
+            </div>
+            <h3>Build judgment</h3>
+            <p>Learn the security basics and the review habits that make AI a useful collaborator, not a liability.</p>
+            <ul class="act-list"><li>Web security</li><li>Working with AI</li></ul>
+          </a>
+        </div>
+
+        <div class="path-foot">
+          <p>Each module ends with a small studio task.</p>
+          <a class="link-arrow" href="curriculum.html">
+            View all eight modules
+            <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--project" aria-labelledby="project-title">
+      <div class="shell">
+        <div class="project-grid">
+          <div class="project-copy">
+            <p class="eyebrow"><span>03</span> The project</p>
+            <h2 id="project-title">A website <span class="serif">only you</span> could make.</h2>
+            <p class="project-lede">A portfolio, a small business, a field guide, a tool, a site about something you know well. The subject is yours. The standards are not negotiable.</p>
+            <ul class="project-reqs">
+              <li>Four pages or more</li>
+              <li>Your own content</li>
+              <li>Semantic &amp; accessible</li>
+              <li>Responsive on a phone</li>
+              <li>At least one interaction</li>
+              <li>Live at a real address</li>
+              <li>A Git history of the work</li>
+              <li>No server required</li>
+            </ul>
+            <div class="actions">
+              <a class="button" href="project.html">
+                Open the full brief
+                <span class="button-icon" aria-hidden="true">
+                  <svg class="icon-arrow" viewBox="0 0 16 16"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+                </span>
+              </a>
+              <a class="link-arrow" href="project.html#requirements">
+                Track your requirements
+                <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <figure class="project-exhibit">
+            <span class="exhibit-stamp">Your subject here</span>
+            <div class="browser" role="img" aria-label="Browser preview of an example field guide website titled The World Underfoot, with abstract botanical artwork.">
+              <div class="browser-bar">
+                <span class="browser-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="browser-address">moss-and-moss.site</span>
+              </div>
+              <div class="browser-view">
+                <div class="mock-nav">
+                  <span class="mock-logo">Moss &amp; Moss</span>
+                  <span>Index&nbsp;&nbsp; Notes&nbsp;&nbsp; About</span>
+                </div>
+                <div class="mock-main">
+                  <div class="mock-copy">
+                    <p class="mock-kicker">Field note 001 / Olympic Peninsula</p>
+                    <h3>The world<br> underfoot.</h3>
+                    <p class="mock-text">Moss does not hurry. It finds the smallest damp place and makes a world there.</p>
+                    <span class="mock-cta">Read the field notes &#8594;</span>
+                  </div>
+                  <div class="mock-art">
+                    <svg viewBox="0 0 420 480" aria-hidden="true">
+                      <rect width="420" height="480" fill="#e3ebd3"/>
+                      <g stroke="#a7b78a" stroke-width="1" opacity=".45">
+                        <path d="M0 80h420M0 160h420M0 240h420M0 320h420M0 400h420M70 0v480M140 0v480M210 0v480M280 0v480M350 0v480"/>
+                      </g>
+                      <circle cx="310" cy="145" r="92" fill="#d9ff43" opacity=".82"/>
+                      <path d="M-20 425C48 354 119 358 183 374c66 16 105-27 165-14 36 8 65 34 86 63v77H-20Z" fill="#2f4e35"/>
+                      <path d="M-20 455C56 402 126 403 194 421c53 14 92-2 137-7 38-4 72 5 101 26v60H-20Z" fill="#41633f"/>
+                      <g fill="none" stroke="#2f5b3d" stroke-linecap="round">
+                        <path d="M196 406c-8-82 24-148 92-205" stroke-width="3"/>
+                        <path d="M112 420c-3-51 13-89 47-123" stroke-width="2.5"/>
+                        <path d="M329 432c-7-50 3-86 33-119" stroke-width="2.5"/>
+                        <path d="M80 416c0-25-8-41-24-57" stroke-width="2"/>
+                        <path d="M360 424c5-24 17-39 35-48" stroke-width="2"/>
+                      </g>
+                      <g fill="#2f5b3d">
+                        <ellipse cx="177" cy="371" rx="34" ry="9" transform="rotate(-39 177 371)"/>
+                        <ellipse cx="188" cy="337" rx="36" ry="9" transform="rotate(-52 188 337)"/>
+                        <ellipse cx="207" cy="303" rx="36" ry="9" transform="rotate(-63 207 303)"/>
+                        <ellipse cx="233" cy="273" rx="34" ry="8" transform="rotate(-71 233 273)"/>
+                        <ellipse cx="260" cy="247" rx="29" ry="7" transform="rotate(-81 260 247)"/>
+                        <ellipse cx="283" cy="226" rx="22" ry="6" transform="rotate(-99 283 226)"/>
+                      </g>
+                      <g fill="#7d9662">
+                        <ellipse cx="218" cy="371" rx="31" ry="8" transform="rotate(30 218 371)"/>
+                        <ellipse cx="229" cy="338" rx="31" ry="8" transform="rotate(19 229 338)"/>
+                        <ellipse cx="248" cy="305" rx="30" ry="8" transform="rotate(8 248 305)"/>
+                        <ellipse cx="273" cy="275" rx="28" ry="7" transform="rotate(-1 273 275)"/>
+                        <ellipse cx="297" cy="249" rx="23" ry="6" transform="rotate(-8 297 249)"/>
+                      </g>
+                      <g fill="#d9ff43">
+                        <ellipse cx="143" cy="350" rx="23" ry="6" transform="rotate(-52 143 350)"/>
+                        <ellipse cx="158" cy="323" rx="23" ry="6" transform="rotate(-45 158 323)"/>
+                        <ellipse cx="338" cy="360" rx="24" ry="6" transform="rotate(-60 338 360)"/>
+                        <ellipse cx="350" cy="334" rx="22" ry="5" transform="rotate(-50 350 334)"/>
+                      </g>
+                      <g fill="#b7c99f">
+                        <ellipse cx="183" cy="396" rx="28" ry="7" transform="rotate(-25 183 396)"/>
+                        <ellipse cx="210" cy="408" rx="24" ry="6" transform="rotate(7 210 408)"/>
+                        <ellipse cx="125" cy="389" rx="19" ry="5" transform="rotate(22 125 389)"/>
+                      </g>
+                      <g fill="#2f5b3d">
+                        <circle cx="64" cy="364" r="4"/><circle cx="74" cy="347" r="3"/><circle cx="86" cy="336" r="2.5"/>
+                        <circle cx="372" cy="384" r="3.5"/><circle cx="386" cy="369" r="2.5"/>
+                      </g>
+                      <g stroke="#2f5b3d" stroke-width="1.5">
+                        <path d="M64 370v-16M74 354v-14M86 344v-11M372 392v-17M386 377v-13" fill="none"/>
+                      </g>
+                      <g fill="#fbf9f2">
+                        <circle cx="64" cy="352" r="5"/><circle cx="74" cy="339" r="4"/><circle cx="86" cy="331" r="3.5"/>
+                        <circle cx="372" cy="373" r="4.5"/><circle cx="386" cy="361" r="3.5"/>
+                      </g>
+                      <path d="M24 36h58" stroke="#2f5b3d" stroke-width="2"/>
+                      <text x="24" y="28" fill="#2f5b3d" font-family="Consolas, monospace" font-size="9" letter-spacing="1.5">PLATE 04 / BRYOPHYTA</text>
+                      <text x="24" y="466" fill="#fbf9f2" font-family="Consolas, monospace" font-size="8" letter-spacing="1.2">SPECIMEN 017 — OBSERVED IN RAIN</text>
+                    </svg>
+                  </div>
+                </div>
+                <div class="mock-foot">
+                  <span>48.4° N / 123.9° W</span>
+                  <span>Field guide — Vol. 01</span>
+                </div>
+              </div>
+            </div>
+            <figcaption>Exhibit A — one possible subject, designed and built from scratch. Yours can be anything you know well.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--ink" aria-labelledby="judgment-title">
+      <div class="shell">
+        <div class="judgment-grid">
+          <div class="judgment-copy">
+            <p class="eyebrow"><span>04</span> The central skill</p>
+            <h2 id="judgment-title">The code runs. <span class="serif">That's not the bar.</span></h2>
+            <p>AI can produce plausible code faster than anyone can read it. This course makes you the reviewer: trace assumptions, test the edges, and ask what the output leaves out.</p>
+            <ul class="judgment-points">
+              <li>Correctness before cleverness</li>
+              <li>Accessibility is part of done</li>
+              <li>Every input is a trust boundary</li>
+              <li>If you can't explain it, don't ship it</li>
+            </ul>
+            <a class="button button--acid" href="code-review.html">
+              Enter the code review studio
+              <span class="button-icon" aria-hidden="true">
+                <svg class="icon-arrow" viewBox="0 0 16 16"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+              </span>
+            </a>
+          </div>
+
+          <div class="code-card" aria-label="Example of AI-generated code with a security flaw">
+            <div class="code-card-head">
+              <span class="code-file">review.js</span>
+              <span class="code-badge">Needs review</span>
+            </div>
+            <pre class="code-card-body"><code><span class="code-comment">// AI: "Simple and safe!"</span>
+<span class="code-keyword">const</span> name = <span class="code-keyword">new</span> URLSearchParams(location.search).get(<span class="code-string">"name"</span>);
+<span class="code-keyword">const</span> el = document.querySelector(<span class="code-string">"#greeting"</span>);
+
+el.<span class="code-danger">innerHTML</span> = <span class="code-string">`Hello, ${name}`</span>;</code></pre>
+            <div class="code-card-note">
+              <span class="note-mark" aria-hidden="true">!</span>
+              <p><strong>Plausible. Not safe.</strong> The name comes from the URL, so a visitor controls what lands inside <code>innerHTML</code>. One review question changes the outcome.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="shell closing-grid">
+        <div>
+          <p class="eyebrow"><span>05</span> Ready when you are</p>
+          <h2 id="closing-title">What will <span class="serif">you</span> put on the web?</h2>
+        </div>
+        <div class="closing-side">
+          <p>Start with a subject you already know well enough to explain. The course will give you the craft to build it — and the judgment to make it good.</p>
+          <div class="actions">
+            <a class="button" href="project.html">
+              Take the project brief
+              <span class="button-icon" aria-hidden="true">
+                <svg class="icon-arrow" viewBox="0 0 16 16"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+              </span>
+            </a>
+            <a class="button button--ghost" href="https://webtech.landrock.io/" rel="external">
+              Full lesson material
+              <span class="button-icon" aria-hidden="true">
+                <svg class="icon-arrow" viewBox="0 0 16 16"><path d="M4 12 12 4M5 4h7v7"/></svg>
+              </span>
+            </a>
+          </div>
+          <p class="closing-note">Course lessons live at <a href="https://webtech.landrock.io/" rel="external">webtech.landrock.io</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Webtech home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 36 36"><path d="M7 10l5 16 6-12 6 12 5-16" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+            </span>
+            <span class="brand-name">webtech<span class="brand-dot">.</span></span>
+          </a>
+          <p class="footer-tagline">A course companion for learning the web in full: the craft of building it, the discipline of shipping it, and the judgment to question it.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h2 class="footer-heading">Explore</h2>
+            <ul>
+              <li><a href="curriculum.html">Curriculum</a></li>
+              <li><a href="project.html">Project brief</a></li>
+              <li><a href="code-review.html">Code review studio</a></li>
+              <li><a href="field-guide.html">Field guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Reference</h2>
+            <ul>
+              <li><a href="https://webtech.landrock.io/" rel="external">Full lesson material</a></li>
+              <li><a href="https://developer.mozilla.org/" rel="external">MDN Web Docs</a></li>
+              <li><a href="https://web.dev/learn" rel="external">web.dev Learn</a></li>
+              <li><a href="https://validator.w3.org/" rel="external">W3C validator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Webtech course companion. An original site built around the course outline.</p>
+        <p>Hand-built with HTML, CSS &amp; JavaScript. No frameworks. No build step.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

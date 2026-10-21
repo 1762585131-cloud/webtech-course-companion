@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Field guide — Web Technology</title>
+  <meta name="description" content="A searchable glossary, publishing pre-flight checklist, web security brief, and reference toolkit for building and shipping for the web.">
+  <meta name="theme-color" content="#f3f0e7">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Webtech home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><path d="M7 10l5 16 6-12 6 12 5-16" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+        </span>
+        <span class="brand-name">webtech<span class="brand-dot">.</span></span>
+      </a>
+      <p class="header-note">Web Technology <span>/</span> Course companion</p>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="nav-toggle-text" data-nav-text>Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul class="site-nav-list">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="curriculum.html">Curriculum</a></li>
+          <li><a href="project.html">Project</a></li>
+          <li><a href="code-review.html">Code review</a></li>
+          <li><a href="field-guide.html" aria-current="page">Field guide</a></li>
+        </ul>
+        <a class="site-nav-cta" href="#glossary">
+          Look something up
+          <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="shell">
+        <div class="page-hero-top">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Overview</a></li>
+              <li aria-current="page">Field guide</li>
+            </ol>
+          </nav>
+          <span class="page-code">CH. 04 / Reference</span>
+        </div>
+        <div class="page-hero-grid">
+          <div>
+            <p class="eyebrow"><span>04</span> The field guide</p>
+            <h1 class="page-title" id="page-title">A pocket reference <span class="serif">for the whole stack.</span></h1>
+            <p class="page-lede">The vocabulary, pre-flight checks, security defaults, and links worth keeping open while you build. Short enough to use in the middle of a problem.</p>
+          </div>
+          <aside class="page-hero-aside" aria-labelledby="guide-contents-title">
+            <div class="guide-index-card">
+              <div class="guide-index-top" id="guide-contents-title">
+                <span>Inside this guide</span>
+                <span>4 sections</span>
+              </div>
+              <ul class="guide-index-list">
+                <li><span>01 / Glossary</span>20 terms</li>
+                <li><span>02 / Pre-flight</span>10 checks</li>
+                <li><span>03 / Security</span>4 defaults</li>
+                <li><span>04 / Toolkit</span>9 references</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="shell">
+      <div class="guide-layout">
+        <aside class="guide-sidebar">
+          <nav class="sidebar-nav" aria-label="On this page">
+            <p class="sidebar-title">On this page</p>
+            <ul>
+              <li><a href="#glossary">Glossary</a></li>
+              <li><a href="#preflight">Pre-flight checks</a></li>
+              <li><a href="#safety">Security brief</a></li>
+              <li><a href="#toolkit">Toolkit</a></li>
+            </ul>
+          </nav>
+          <a class="sidebar-resource" href="https://webtech.landrock.io/" rel="external">
+            <span>Full lesson material</span>
+            <strong>webtech.landrock.io</strong>
+            <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>
+          </a>
+        </aside>
+
+        <div class="guide-content">
+          <section class="guide-section" id="glossary" aria-labelledby="glossary-title">
+            <div class="guide-heading">
+              <div>
+                <p class="eyebrow"><span>01</span> Glossary</p>
+                <h2 id="glossary-title">Speak the language.</h2>
+              </div>
+              <p>Definitions you can use in a sentence &mdash; not a textbook. Search by term, symptom, or idea.</p>
+            </div>
+
+            <div class="guide-search" role="search">
+              <label for="glossary-search">Search the glossary</label>
+              <div class="search-field">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.75" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m13 13 4 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                <input id="glossary-search" type="search" placeholder="Try &ldquo;DNS&rdquo;, &ldquo;focus&rdquo;, or &ldquo;HTTPS&rdquo;" autocomplete="off" spellcheck="false" data-glossary-search>
+                <button class="search-clear" type="button" data-glossary-clear hidden>Clear</button>
+              </div>
+              <p class="search-status" aria-live="polite" data-glossary-status>Showing all 20 terms.</p>
+            </div>
+            <noscript><p class="search-status">Search needs JavaScript. All 20 terms are listed below.</p></noscript>
+
+            <dl class="glossary-grid" data-glossary>
+              <div class="term">
+                <dt><span class="term-name">URL</span><span class="term-tag">Foundations</span></dt>
+                <dd>The address of a resource on the web: scheme, host, path, and optional query and fragment. <code>https://site.dev/work?ref=home#process</code></dd>
+              </div>
+              <div class="term">
+                <dt><span class="term-name">DNS</span><span class="term-tag">Foundations</span></dt>
+                <dd>The domain name system &mdash; the web's address book. It resolves a name like <code>example.com</code> into an IP address the network can route to.</dd>
+              </div>
+              <div class="term">
+                <dt><span class="term-name">HTTP</span><span class="term-tag">Foundations</span></dt>
+                <dd>The request&ndash;response protocol browsers and servers use to exchange resources, headers, and status codes. HTTPS is HTTP carried over an encrypted connection.</dd>
+              </div>
+              <div class="term">
+                <dt><span class="term-name">Status code</span><span class="term-tag">Foundations</span></dt>
+                <dd>A three-digit summary of an HTTP response: 2xx success, 3xx redirect, 4xx client error, 5xx server error. A 404 is a valid response, not a crash.</dd>
+              </div>
+              <div class="term">
+                <dt><span class="term-name">DOM</span><span class="term-tag">Foundations</span></dt>
+                <dd>The browser's live, tree-shaped representation of the HTML. JavaScript reads and changes the DOM; the source file stays unchanged behind it.</dd>
+              </div>
+
+              <div class="term">
+                <dt><span class="term-name">Semantic HTML</span><span class="term-tag">HTML</span></dt>
+                <dd>Choosing elements for what content is &mdash; heading, nav, main, button, label &mdash; not just how it looks. Semantics give browsers, assistive technology, and search engines usable structure.</dd>
+              </div>
+              <div class="term">
+                <dt><span class="term-name">Accessibility</span><span class="term-tag">HTML</span></dt>
+                <dd>Designing so people with different senses, devices, and abilities can use the page. It usually starts with correct HTML, visible focus, and keyboard access.</dd>
+              </div>
+              <div class="term">
+                <dt><span class="term-name">Form validation</span><span class="term-tag">HTML</span></dt>
+                <dd>Checking input before accepting it. Browser validation improves the experience; it is never a security boundary. Validate again wherever the data is actually processed.</dd>
+              </div>
+
+              <div class="term">
+                <dt><span class="term-name">The cascade</span><span class="term-tag">CSS</span></dt>
+                <dd>The algorithm that decides which CSS declaration wins when several rules set the same property. Origin, specificity, and source order all matter.</dd>
+              </div>
+              <div class="term">
+                <dt><span class="term-name">Specificity</span><span class="term-tag">CSS</span></dt>
+                <dd>A weight given to selectors in the cascade. IDs outweigh classes; classes outweigh elements. Reaching for <code>!important</code> usually hides a structural problem.</dd>
+              </div>
+              <div class="term">
+                <dt><span class="term-name">Box model</span><span class="term-tag">CSS</span></dt>
+                <dd>Every element is a content box surrounded by padding, border, and margin. Misunderstanding which part a width applies to is a classic layout bug.</dd>
+              </div>
+              <div class="term">
+                <dt><span class="term-name">Flexbox &amp; Grid</span><span class="term-tag">CSS</span></dt>
+                <dd>Flexbox distributes items along one axis; Grid works in rows and columns at once. Both are layout tools, not replacements for sensible markup.</dd>
+              </div>
+              <div class="term">
+                <dt><span class="term-name">Responsive design</span><span class="term-tag">CSS</span></dt>
+                <dd>A layout that adapts to viewport, content, and capability &mdash; not one fixed design squeezed to fit. Fluid widths and content-driven breakpoints come before decoration.</dd>
+              </div>
+
+              <div class="term">
+                <dt><span class="term-name">Git</span><span class="term-tag">Ship</span></dt>
+                <dd>A version control system that records snapshots of a project. Commit small changes with messages that explain <em>why</em>, not just what changed.</dd>
+              </div>
+              <div class="term">
+                <dt><span class="term-name">Deployment</span><span class="term-tag">Ship</span></dt>
+                <dd>Publishing built files to a host so they are available at a public URL. Test the deployed copy: localhost and production are different environments.</dd>
+              </div>
+              <div class="term">
+                <dt><span class="term-name">SEO</span><span class="term-tag">Ship</span></dt>
+                <dd>Search engine optimisation: helping crawlers understand genuinely useful content. Clear structure, titles, links, and performance matter more than tricks.</dd>
+              </div>
+
+              <div class="term">
+                <dt><span class="term-name">HTTPS</span><span class="term-tag">Security</span></dt>
+                <dd>HTTP over TLS: encrypted in transit and authenticated by a certificate. It protects data between browser and server, not from a compromised or dishonest server.</dd>
+              </div>
+              <div class="term">
+                <dt><span class="term-name">XSS</span><span class="term-tag">Security</span></dt>
+                <dd>Cross-site scripting: attacker-controlled input becomes executable markup or script in a page. Escape output for its context and avoid sinks like <code>innerHTML</code> for untrusted text.</dd>
+              </div>
+              <div class="term">
+                <dt><span class="term-name">CSRF</span><span class="term-tag">Security</span></dt>
+                <dd>Cross-site request forgery: another site causes the browser to send an authenticated, state-changing request. Defences include CSRF tokens, SameSite cookies, and Origin checks.</dd>
+              </div>
+              <div class="term">
+                <dt><span class="term-name">Password handling</span><span class="term-tag">Security</span></dt>
+                <dd>Passwords need slow, salted hashing and a secure recovery path. A static site should use a trusted authentication provider rather than inventing its own credential storage.</dd>
+              </div>
+            </dl>
+            <p class="empty-state" data-glossary-empty hidden>No terms match &ldquo;<span data-glossary-query></span>&rdquo;. Try a simpler word or a broader idea.</p>
+          </section>
+
+          <section class="guide-section" id="preflight" aria-labelledby="preflight-title">
+            <div class="guide-heading">
+              <div>
+                <p class="eyebrow"><span>02</span> Before publish</p>
+                <h2 id="preflight-title">The ten-minute pre-flight.</h2>
+              </div>
+              <p>Not a substitute for real testing. The minimum pass before you call a site live and send the link to someone who matters.</p>
+            </div>
+
+            <ul class="preflight-list">
+              <li class="preflight-item">
+                <span class="preflight-mark" aria-hidden="true">&#10003;</span>
+                <div><strong>Every path resolves.</strong><p>Click every link, asset, and nav item on the deployed site &mdash; not just locally.</p></div>
+              </li>
+              <li class="preflight-item">
+                <span class="preflight-mark" aria-hidden="true">&#10003;</span>
+                <div><strong>Headings make sense.</strong><p>One h1 per page, no skipped levels, and headings that describe the content beneath them.</p></div>
+              </li>
+              <li class="preflight-item">
+                <span class="preflight-mark" aria-hidden="true">&#10003;</span>
+                <div><strong>Images have a purpose.</strong><p>Useful alt text for content images; an empty alt for decoration. No filenames as descriptions.</p></div>
+              </li>
+              <li class="preflight-item">
+                <span class="preflight-mark" aria-hidden="true">&#10003;</span>
+                <div><strong>The keyboard works.</strong><p>Every interactive element is reachable and operable; focus is visible; nothing traps the user.</p></div>
+              </li>
+              <li class="preflight-item">
+                <span class="preflight-mark" aria-hidden="true">&#10003;</span>
+                <div><strong>The phone pass.</strong><p>Test at 360 pixels on a real device. No horizontal scroll, no tiny tap targets, no hover-only actions.</p></div>
+              </li>
+              <li class="preflight-item">
+                <span class="preflight-mark" aria-hidden="true">&#10003;</span>
+                <div><strong>Forms explain themselves.</strong><p>Visible labels, errors announced and linked to their fields, and a clear confirmation after success.</p></div>
+              </li>
+              <li class="preflight-item">
+                <span class="preflight-mark" aria-hidden="true">&#10003;</span>
+                <div><strong>No secrets in the repo.</strong><p>No passwords, API keys, or private data. Git history is public far longer than you expect.</p></div>
+              </li>
+              <li class="preflight-item">
+                <span class="preflight-mark" aria-hidden="true">&#10003;</span>
+                <div><strong>Live details are handled.</strong><p>HTTPS, correct page titles, a favicon, a useful 404 page, and a working custom domain if you use one.</p></div>
+              </li>
+              <li class="preflight-item">
+                <span class="preflight-mark" aria-hidden="true">&#10003;</span>
+                <div><strong>The basics are fast.</strong><p>Compress images, lazy-load below-the-fold media, and remove scripts or fonts you do not actually use.</p></div>
+              </li>
+              <li class="preflight-item">
+                <span class="preflight-mark" aria-hidden="true">&#10003;</span>
+                <div><strong>Read it as a stranger.</strong><p>Open the homepage cold. Can you tell who it is for and what to do next within ten seconds?</p></div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="guide-section" id="safety" aria-labelledby="safety-title">
+            <div class="guide-heading">
+              <div>
+                <p class="eyebrow"><span>03</span> Security</p>
+                <h2 id="safety-title">The short security brief.</h2>
+              </div>
+              <p>Enough to design safer defaults and ask better questions. Not enough to make you a security engineer &mdash; and that is fine.</p>
+            </div>
+
+            <div class="security-grid">
+              <article class="security-card">
+                <span class="security-label">01 / Default</span>
+                <h3>HTTPS, always.</h3>
+                <p>Serve every page over HTTPS. Modern hosts make certificates straightforward; there is no good reason for a public site to ship without it.</p>
+              </article>
+              <article class="security-card">
+                <span class="security-label">02 / Credentials</span>
+                <h3>Do not store plaintext passwords.</h3>
+                <p>Never store passwords in a repo or a database as plain text. Use a trusted authentication provider, slow salted hashing, and a careful recovery flow. Do not invent cryptography.</p>
+              </article>
+              <article class="security-card">
+                <span class="security-label">03 / Injection</span>
+                <h3>Treat input as hostile.</h3>
+                <p>Do not interpolate untrusted values into HTML. Use <code>textContent</code> when you mean text; sanitise deliberately when you truly need HTML. Avoid inline event handlers.</p>
+              </article>
+              <article class="security-card">
+                <span class="security-label">04 / Requests</span>
+                <h3>Know the CSRF pattern.</h3>
+                <p>State-changing requests need protection: SameSite cookies, CSRF tokens, and Origin checks. Your static project may not have sessions, but the boundary is still worth understanding.</p>
+              </article>
+            </div>
+            <p class="protocol-tip"><strong>A useful habit:</strong> ask &ldquo;who controls this value, and where does it end up?&rdquo; on every line that handles input. Most web vulnerabilities are a failure to answer that clearly.</p>
+          </section>
+
+          <section class="guide-section" id="toolkit" aria-labelledby="toolkit-title">
+            <div class="guide-heading">
+              <div>
+                <p class="eyebrow"><span>04</span> The toolkit</p>
+                <h2 id="toolkit-title">Keep these close.</h2>
+              </div>
+              <p>A short list of references worth bookmarking. Start with the docs, then validate what you made.</p>
+            </div>
+
+            <ul class="resource-list">
+              <li>
+                <a class="resource-link" href="https://webtech.landrock.io/" rel="external">
+                  <span class="resource-number">01</span>
+                  <span>
+                    <span class="resource-title">Full lesson material</span>
+                    <span class="resource-meta">webtech.landrock.io</span>
+                    <span class="resource-description">The complete lessons this companion site supports. Start here for the long version of every module.</span>
+                  </span>
+                  <svg class="resource-arrow icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="resource-link" href="https://developer.mozilla.org/" rel="external">
+                  <span class="resource-number">02</span>
+                  <span>
+                    <span class="resource-title">MDN Web Docs</span>
+                    <span class="resource-meta">developer.mozilla.org</span>
+                    <span class="resource-description">The reference for HTML, CSS, JavaScript, and browser APIs, with examples you can inspect.</span>
+                  </span>
+                  <svg class="resource-arrow icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="resource-link" href="https://web.dev/learn" rel="external">
+                  <span class="resource-number">03</span>
+                  <span>
+                    <span class="resource-title">web.dev Learn</span>
+                    <span class="resource-meta">web.dev/learn</span>
+                    <span class="resource-description">Structured learning paths for HTML, CSS, JavaScript, accessibility, and performance.</span>
+                  </span>
+                  <svg class="resource-arrow icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="resource-link" href="https://validator.w3.org/" rel="external">
+                  <span class="resource-number">04</span>
+                  <span>
+                    <span class="resource-title">W3C Markup Validation Service</span>
+                    <span class="resource-meta">validator.w3.org</span>
+                    <span class="resource-description">A second pair of eyes for document structure. A pass is not proof of accessibility, but a failure is worth reading.</span>
+                  </span>
+                  <svg class="resource-arrow icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="resource-link" href="https://wave.webaim.org/" rel="external">
+                  <span class="resource-number">05</span>
+                  <span>
+                    <span class="resource-title">WAVE</span>
+                    <span class="resource-meta">wave.webaim.org</span>
+                    <span class="resource-description">Fast accessibility checks. Combine the output with real keyboard testing and, ideally, a screen reader.</span>
+                  </span>
+                  <svg class="resource-arrow icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="resource-link" href="https://developer.chrome.com/docs/lighthouse/overview" rel="external">
+                  <span class="resource-number">06</span>
+                  <span>
+                    <span class="resource-title">Lighthouse</span>
+                    <span class="resource-meta">developer.chrome.com</span>
+                    <span class="resource-description">Performance, accessibility, and SEO signals in Chrome DevTools. Use it to find questions, not to chase a perfect score.</span>
+                  </span>
+                  <svg class="resource-arrow icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="resource-link" href="https://git-scm.com/book" rel="external">
+                  <span class="resource-number">07</span>
+                  <span>
+                    <span class="resource-title">Pro Git</span>
+                    <span class="resource-meta">git-scm.com/book</span>
+                    <span class="resource-description">A clear, free book on what Git is actually tracking. Chapters 2 and 3 cover most of what the project needs.</span>
+                  </span>
+                  <svg class="resource-arrow icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="resource-link" href="https://docs.github.com/en/pages" rel="external">
+                  <span class="resource-number">08</span>
+                  <span>
+                    <span class="resource-title">GitHub Pages</span>
+                    <span class="resource-meta">docs.github.com/pages</span>
+                    <span class="resource-description">Static hosting directly from a repository &mdash; a practical way to satisfy the live URL requirement.</span>
+                  </span>
+                  <svg class="resource-arrow icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="resource-link" href="https://caniuse.com/" rel="external">
+                  <span class="resource-number">09</span>
+                  <span>
+                    <span class="resource-title">Can I use</span>
+                    <span class="resource-meta">caniuse.com</span>
+                    <span class="resource-description">Browser support tables for modern CSS and JavaScript features. Check the feature, not the vibe.</span>
+                  </span>
+                  <svg class="resource-arrow icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7"/></svg>
+                </a>
+              </li>
+            </ul>
+
+            <aside class="course-material" aria-labelledby="material-title">
+              <p class="mono-label">The long version</p>
+              <h3 id="material-title">Want the full lessons, not the pocket guide?</h3>
+              <p>Every module is supported by complete lesson material at the course site. Use this companion to orient yourself; use the lessons to go deeper.</p>
+              <a class="button button--acid" href="https://webtech.landrock.io/" rel="external">
+                Open webtech.landrock.io
+                <span class="button-icon" aria-hidden="true">
+                  <svg class="icon-arrow" viewBox="0 0 16 16"><path d="M4 12 12 4M5 4h7v7"/></svg>
+                </span>
+              </a>
+            </aside>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Webtech home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 36 36"><path d="M7 10l5 16 6-12 6 12 5-16" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+            </span>
+            <span class="brand-name">webtech<span class="brand-dot">.</span></span>
+          </a>
+          <p class="footer-tagline">A course companion for learning the web in full: the craft of building it, the discipline of shipping it, and the judgment to question it.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h2 class="footer-heading">Explore</h2>
+            <ul>
+              <li><a href="curriculum.html">Curriculum</a></li>
+              <li><a href="project.html">Project brief</a></li>
+              <li><a href="code-review.html">Code review studio</a></li>
+              <li><a href="field-guide.html">Field guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Reference</h2>
+            <ul>
+              <li><a href="https://webtech.landrock.io/" rel="external">Full lesson material</a></li>
+              <li><a href="https://developer.mozilla.org/" rel="external">MDN Web Docs</a></li>
+              <li><a href="https://web.dev/learn" rel="external">web.dev Learn</a></li>
+              <li><a href="https://validator.w3.org/" rel="external">W3C validator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Webtech course companion. An original site built around the course outline.</p>
+        <p>Hand-built with HTML, CSS &amp; JavaScript. No frameworks. No build step.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

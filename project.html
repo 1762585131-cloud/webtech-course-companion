@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The project — Web Technology</title>
+  <meta name="description" content="The Web Technology project brief: build a four-page website of your own, with semantic accessible markup, responsive layout, an interaction, a live URL, and a real Git history.">
+  <meta name="theme-color" content="#f3f0e7">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Webtech home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><path d="M7 10l5 16 6-12 6 12 5-16" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+        </span>
+        <span class="brand-name">webtech<span class="brand-dot">.</span></span>
+      </a>
+      <p class="header-note">Web Technology <span>/</span> Course companion</p>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="nav-toggle-text" data-nav-text>Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul class="site-nav-list">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="curriculum.html">Curriculum</a></li>
+          <li><a href="project.html" aria-current="page">Project</a></li>
+          <li><a href="code-review.html">Code review</a></li>
+          <li><a href="field-guide.html">Field guide</a></li>
+        </ul>
+        <a class="site-nav-cta" href="#requirements">
+          Track the brief
+          <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="shell">
+        <div class="page-hero-top">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Overview</a></li>
+              <li aria-current="page">The project</li>
+            </ol>
+          </nav>
+          <span class="page-code">CH. 02 / The brief</span>
+        </div>
+        <div class="page-hero-grid">
+          <div>
+            <p class="eyebrow"><span>02</span> The project brief</p>
+            <h1 class="page-title" id="page-title">One brief. <span class="serif">Your name on it.</span></h1>
+            <p class="page-lede">This is not a worksheet. You will design and build a complete site of your own, put it at a real address, and explain the decisions behind it. A portfolio, a business, a guide, a tool &mdash; the subject is yours.</p>
+          </div>
+          <aside class="page-hero-aside" aria-labelledby="facts-title">
+            <h2 class="visually-hidden" id="facts-title">Project at a glance</h2>
+            <dl class="fact-sheet">
+              <div class="fact">
+                <dt>Pages minimum</dt>
+                <dd>04+ <span>with navigation that works everywhere</span></dd>
+              </div>
+              <div class="fact">
+                <dt>Requirements</dt>
+                <dd>07 <span>each one reviewed before you ship</span></dd>
+              </div>
+              <div class="fact">
+                <dt>Live address</dt>
+                <dd>01 <span>a real URL, open to anyone</span></dd>
+              </div>
+              <div class="fact">
+                <dt>Backend needed</dt>
+                <dd>00 <span>no server-side code or database required</span></dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ideas-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span>01</span> Find your subject</p>
+            <h2 class="section-title" id="ideas-title">Start with what <span class="serif">you already know.</span></h2>
+          </div>
+          <p class="section-intro">The best project is not the most ambitious one. It is the one you can fill with specific, honest content &mdash; and still want to look at after twelve iterations.</p>
+        </div>
+
+        <div class="idea-grid">
+          <article class="idea">
+            <div class="idea-top"><span class="idea-number">01</span><span class="idea-type">Personal</span></div>
+            <h3>The portfolio</h3>
+            <p>Six projects, a short about page, and a way to get in touch. Use it to practise editing your own work.</p>
+          </article>
+          <article class="idea">
+            <div class="idea-top"><span class="idea-number">02</span><span class="idea-type">Commercial</span></div>
+            <h3>The small business</h3>
+            <p>A real service, clear prices, and hours people can actually find. Content first; decoration second.</p>
+          </article>
+          <article class="idea">
+            <div class="idea-top"><span class="idea-number">03</span><span class="idea-type">Editorial</span></div>
+            <h3>The field guide</h3>
+            <p>What you know about a place, a craft, a species, or a scene. Built to be browsed slowly.</p>
+          </article>
+          <article class="idea">
+            <div class="idea-top"><span class="idea-number">04</span><span class="idea-type">Utility</span></div>
+            <h3>The useful tool</h3>
+            <p>A calculator, planner, or tracker that does one job well &mdash; and tells you when the input is wrong.</p>
+          </article>
+          <article class="idea">
+            <div class="idea-top"><span class="idea-number">05</span><span class="idea-type">Community</span></div>
+            <h3>The local directory</h3>
+            <p>The good cafés, repair shops, and quiet corners. A small site with a strong point of view.</p>
+          </article>
+          <article class="idea">
+            <div class="idea-top"><span class="idea-number">06</span><span class="idea-type">Essay</span></div>
+            <h3>The argument</h3>
+            <p>A researched point of view, structured to be read on a phone and accessible to everyone.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section requirements-section" id="requirements" aria-labelledby="requirements-title">
+      <div class="shell">
+        <div class="requirements-layout">
+          <div class="requirements-copy">
+            <p class="eyebrow"><span>02</span> The non-negotiables</p>
+            <h2 id="requirements-title">Seven ways a site <span class="serif">earns a pass.</span></h2>
+            <p>Every requirement is something a stranger can check. Use the tracker as you work; a site is not finished just because it renders.</p>
+            <p class="requirements-note">No server-side programming. No database. A well-built static site is enough.</p>
+          </div>
+
+          <div class="tracker" data-project-tracker>
+            <div class="tracker-head">
+              <div>
+                <p class="tracker-label">Your build tracker</p>
+                <p class="tracker-count"><span data-tracker-count>0</span> / 7 complete</p>
+              </div>
+              <button class="tracker-reset" type="button" data-tracker-reset>Reset</button>
+            </div>
+            <div class="tracker-bar" role="progressbar" aria-label="Project requirements complete" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0" data-tracker-progress>
+              <span data-tracker-bar></span>
+            </div>
+            <ul class="tracker-list">
+              <li>
+                <label class="tracker-item">
+                  <input type="checkbox" value="pages" data-tracker-item>
+                  <span class="tracker-check" aria-hidden="true"></span>
+                  <span class="tracker-copy">
+                    <strong>Four pages or more</strong>
+                    <span>A homepage plus at least three others, reachable through navigation that works on every page.</span>
+                  </span>
+                </label>
+              </li>
+              <li>
+                <label class="tracker-item">
+                  <input type="checkbox" value="content" data-tracker-item>
+                  <span class="tracker-check" aria-hidden="true"></span>
+                  <span class="tracker-copy">
+                    <strong>Content that is yours</strong>
+                    <span>Your words, your images, your point of view. Credit anything you borrow.</span>
+                  </span>
+                </label>
+              </li>
+              <li>
+                <label class="tracker-item">
+                  <input type="checkbox" value="accessible" data-tracker-item>
+                  <span class="tracker-check" aria-hidden="true"></span>
+                  <span class="tracker-copy">
+                    <strong>Semantic, accessible markup</strong>
+                    <span>Headings in order, real links and buttons, useful alt text, visible focus, keyboard paths.</span>
+                  </span>
+                </label>
+              </li>
+              <li>
+                <label class="tracker-item">
+                  <input type="checkbox" value="responsive" data-tracker-item>
+                  <span class="tracker-check" aria-hidden="true"></span>
+                  <span class="tracker-copy">
+                    <strong>Responsive by design</strong>
+                    <span>It works at 360 pixels wide. No horizontal scroll, no microscopic tap targets.</span>
+                  </span>
+                </label>
+              </li>
+              <li>
+                <label class="tracker-item">
+                  <input type="checkbox" value="interactive" data-tracker-item>
+                  <span class="tracker-check" aria-hidden="true"></span>
+                  <span class="tracker-copy">
+                    <strong>At least one interaction</strong>
+                    <span>A filter, form, calculator, gallery, or theme switch &mdash; something the user can actually do.</span>
+                  </span>
+                </label>
+              </li>
+              <li>
+                <label class="tracker-item">
+                  <input type="checkbox" value="live" data-tracker-item>
+                  <span class="tracker-check" aria-hidden="true"></span>
+                  <span class="tracker-copy">
+                    <strong>Live at a real address</strong>
+                    <span>A public URL a stranger can open. Not a screenshot, not a localhost link.</span>
+                  </span>
+                </label>
+              </li>
+              <li>
+                <label class="tracker-item">
+                  <input type="checkbox" value="git" data-tracker-item>
+                  <span class="tracker-check" aria-hidden="true"></span>
+                  <span class="tracker-copy">
+                    <strong>A Git history of the work</strong>
+                    <span>Small, honest commits that show the site developing &mdash; not one final upload called &ldquo;done&rdquo;.</span>
+                  </span>
+                </label>
+              </li>
+            </ul>
+            <p class="tracker-note">Saved in this browser only. Nothing is submitted anywhere.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="process-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span>03</span> The working sequence</p>
+            <h2 class="section-title" id="process-title">From blank page <span class="serif">to live address.</span></h2>
+          </div>
+          <p class="section-intro">A sensible order to work in. Move backward when you discover the content does not fit the design &mdash; that is not failure, it is the process.</p>
+        </div>
+
+        <ol class="process-list">
+          <li class="process-step">
+            <div class="process-step-top"><span class="process-number">01</span><span class="process-output">One sentence</span></div>
+            <h3>Frame</h3>
+            <p>State who the site is for, what it does, and why you are the person to make it. If you cannot fit it in a sentence, narrow it.</p>
+          </li>
+          <li class="process-step">
+            <div class="process-step-top"><span class="process-number">02</span><span class="process-output">A sitemap</span></div>
+            <h3>Map</h3>
+            <p>List the pages and the content each one owns. Draw the navigation before you write the CSS. Five boxes on paper are enough.</p>
+          </li>
+          <li class="process-step">
+            <div class="process-step-top"><span class="process-number">03</span><span class="process-output">Content in HTML</span></div>
+            <h3>Mark up</h3>
+            <p>Write the real content first, in elements that describe it. Get the structure and headings right before decoration.</p>
+          </li>
+          <li class="process-step">
+            <div class="process-step-top"><span class="process-number">04</span><span class="process-output">Phone first</span></div>
+            <h3>Shape</h3>
+            <p>Build the small layout first, then let it grow. Use the browser at 360 pixels. Add complexity only when the content asks for it.</p>
+          </li>
+          <li class="process-step">
+            <div class="process-step-top"><span class="process-number">05</span><span class="process-output">One good interaction</span></div>
+            <h3>Move</h3>
+            <p>Add the JavaScript your site genuinely needs. Test keyboard access, error states, and the path where the user does everything wrong.</p>
+          </li>
+          <li class="process-step">
+            <div class="process-step-top"><span class="process-number">06</span><span class="process-output">Live URL + history</span></div>
+            <h3>Ship</h3>
+            <p>Commit often, deploy, test the live copy on a real phone, and fix what breaks. Then write down what you would do next.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="rubric-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span>04</span> Before you call it done</p>
+            <h2 class="section-title" id="rubric-title">A working site is <span class="serif">the starting line.</span></h2>
+          </div>
+          <p class="section-intro">Use the same four questions a reviewer will: does it mean something, is it well made, does it work in public, and can you defend it?</p>
+        </div>
+
+        <div class="rubric-grid">
+          <article class="rubric-card">
+            <p class="rubric-number">01 / MEANING</p>
+            <h3>Does it answer the brief?</h3>
+            <p>Specific content, a clear point of view, sensible pages, and navigation that helps rather than decorates.</p>
+          </article>
+          <article class="rubric-card">
+            <p class="rubric-number">02 / CRAFT</p>
+            <h3>Is it made well?</h3>
+            <p>Semantic HTML, a coherent visual system, a layout that bends, and interactions that include everyone.</p>
+          </article>
+          <article class="rubric-card">
+            <p class="rubric-number">03 / EVIDENCE</p>
+            <h3>Does it work in public?</h3>
+            <p>A live URL, a real Git history, no broken paths, and a phone test that is not just the browser's device mode.</p>
+          </article>
+          <article class="rubric-card">
+            <p class="rubric-number">04 / JUDGMENT</p>
+            <h3>Can you defend it?</h3>
+            <p>You can explain what you built, what you borrowed, what AI contributed, and how you checked that it was right.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--ink" aria-labelledby="defense-title">
+      <div class="shell">
+        <div class="defense-grid">
+          <div class="defense-copy">
+            <p class="eyebrow"><span>05</span> The final conversation</p>
+            <h2 id="defense-title">You should be able to <span class="serif">defend it.</span></h2>
+            <p>Not every decision needs a theory. But you should know why the site looks and works the way it does &mdash; and where it is still fragile.</p>
+          </div>
+          <ol class="defense-prompts">
+            <li>Walk me through a decision you changed your mind about.</li>
+            <li>What did you cut, and why was that the right cut?</li>
+            <li>Where is this site most likely to break?</li>
+            <li>Point to something AI helped with. How did you verify it?</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span>06</span> Practical questions</p>
+            <h2 class="section-title" id="faq-title">The things people <span class="serif">ask first.</span></h2>
+          </div>
+          <p class="section-intro">A few honest answers. The short version: choose a real subject, keep the scope small, and build in public from the first week.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Do I need to use a framework?<span class="faq-toggle" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>No. The brief is deliberately built on HTML, CSS, and JavaScript fundamentals. If you choose to add a library, you need to be able to explain what it is doing for you and what it costs.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use images, typefaces, or content from elsewhere?<span class="faq-toggle" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Your own words and point of view are required. Use images and fonts you have the right to use, and credit them. Borrowing a layout idea is normal; presenting someone else's work as your own is not.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What counts as an interactive element?<span class="faq-toggle" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>A filter, a calculator, a form with real validation, a gallery with keyboard controls, a saved checklist, a theme switch. It should do something useful, make sense without a mouse, and handle the case where the user gets it wrong.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need a server or a database?<span class="faq-toggle" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>No. Neither is required. A static site deployed to a host is enough to meet the brief. If you want to experiment beyond it, that is your choice, not a requirement.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>How much Git history is enough?<span class="faq-toggle" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Enough that the development is visible: a first scaffold, then small commits as pages, styles, and features arrive. One commit called &ldquo;final&rdquo; does not show the work; a readable history does.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use AI tools?<span class="faq-toggle" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Yes &mdash; but you own what you submit. Use AI to explore, draft, and debug; then verify it, adapt it, and be ready to explain every line you keep. The course is designed to make you the reviewer, not the relay.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What if I am stuck for an idea?<span class="faq-toggle" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>Start with the idea bank above. Pick a subject you can explain without research, then narrow it until four pages feel natural. A small, complete site beats an ambitious, unfinished one.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="next-title">
+      <div class="shell">
+        <div class="curriculum-cta">
+          <div>
+            <p class="eyebrow"><span>07</span> Before you ship</p>
+            <h2 id="next-title">Build the habit of reviewing your own work.</h2>
+            <p>The code review studio gives you three AI-generated snippets and the questions that catch the problems a demo hides.</p>
+          </div>
+          <a class="button" href="code-review.html">
+            Try the review lab
+            <span class="button-icon" aria-hidden="true">
+              <svg class="icon-arrow" viewBox="0 0 16 16"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Webtech home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 36 36"><path d="M7 10l5 16 6-12 6 12 5-16" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+            </span>
+            <span class="brand-name">webtech<span class="brand-dot">.</span></span>
+          </a>
+          <p class="footer-tagline">A course companion for learning the web in full: the craft of building it, the discipline of shipping it, and the judgment to question it.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h2 class="footer-heading">Explore</h2>
+            <ul>
+              <li><a href="curriculum.html">Curriculum</a></li>
+              <li><a href="project.html">Project brief</a></li>
+              <li><a href="code-review.html">Code review studio</a></li>
+              <li><a href="field-guide.html">Field guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Reference</h2>
+            <ul>
+              <li><a href="https://webtech.landrock.io/" rel="external">Full lesson material</a></li>
+              <li><a href="https://developer.mozilla.org/" rel="external">MDN Web Docs</a></li>
+              <li><a href="https://web.dev/learn" rel="external">web.dev Learn</a></li>
+              <li><a href="https://validator.w3.org/" rel="external">W3C validator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Webtech course companion. An original site built around the course outline.</p>
+        <p>Hand-built with HTML, CSS &amp; JavaScript. No frameworks. No build step.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

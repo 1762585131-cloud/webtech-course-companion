@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Code review studio — Web Technology</title>
+  <meta name="description" content="Learn to review code you did not write. A five-pass review method, an interactive lab with AI-generated snippets, and a prompt recipe for working with AI tools.">
+  <meta name="theme-color" content="#f3f0e7">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Webtech home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36"><path d="M7 10l5 16 6-12 6 12 5-16" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+        </span>
+        <span class="brand-name">webtech<span class="brand-dot">.</span></span>
+      </a>
+      <p class="header-note">Web Technology <span>/</span> Course companion</p>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="nav-toggle-text" data-nav-text>Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul class="site-nav-list">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="curriculum.html">Curriculum</a></li>
+          <li><a href="project.html">Project</a></li>
+          <li><a href="code-review.html" aria-current="page">Code review</a></li>
+          <li><a href="field-guide.html">Field guide</a></li>
+        </ul>
+        <a class="site-nav-cta" href="#lab">
+          Try the review lab
+          <svg class="icon-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="shell">
+        <div class="page-hero-top">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Overview</a></li>
+              <li aria-current="page">Code review</li>
+            </ol>
+          </nav>
+          <span class="page-code">CH. 03 / The central skill</span>
+        </div>
+        <div class="page-hero-grid">
+          <div>
+            <p class="eyebrow"><span>03</span> Code review studio</p>
+            <h1 class="page-title" id="page-title">It ships. <span class="serif">But is it right?</span></h1>
+            <p class="page-lede">Anyone can generate code that looks finished. The valuable move is to slow down, trace what it actually does, and decide whether it belongs. That is the skill this course is built around.</p>
+          </div>
+          <aside class="page-hero-aside">
+            <figure class="principle-card">
+              <blockquote>&ldquo;It looks right&rdquo; is not a test.</blockquote>
+              <figcaption>Course principle 01 / Read before you run.</figcaption>
+            </figure>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="protocol-title">
+      <div class="shell">
+        <div class="protocol-layout">
+          <div class="protocol-intro">
+            <p class="eyebrow"><span>01</span> The method</p>
+            <h2 id="protocol-title">The five-pass <span class="serif">review.</span></h2>
+            <p>Use the same questions whether the author was a person, a tutorial, or a language model. Read for intent first; syntax can wait.</p>
+            <div class="protocol-tip"><strong>Rule of thumb:</strong> if the code is short enough that you skip the review, it is short enough to read twice.</div>
+          </div>
+          <ol class="protocol-list">
+            <li class="protocol-step">
+              <span class="protocol-number">01</span>
+              <h3>Read the brief</h3>
+              <p>What was this code supposed to do? Start with intent, not line one. A correct implementation of the wrong requirement is still a defect.</p>
+            </li>
+            <li class="protocol-step">
+              <span class="protocol-number">02</span>
+              <h3>Trace the data</h3>
+              <p>Find where input enters, where it is stored, and where it reaches the page. Every input you did not create is a trust boundary until proven otherwise.</p>
+            </li>
+            <li class="protocol-step">
+              <span class="protocol-number">03</span>
+              <h3>Test the edges</h3>
+              <p>Empty, very long, duplicated, slow, offline, malicious. The demo path is the easiest path; the bugs live at the edges of it.</p>
+            </li>
+            <li class="protocol-step">
+              <span class="protocol-number">04</span>
+              <h3>Check the human path</h3>
+              <p>Tab through it. Zoom the text. Turn off animations. Does focus make sense? Can a screen reader tell what changed? Does it work on a small phone?</p>
+            </li>
+            <li class="protocol-step">
+              <span class="protocol-number">05</span>
+              <h3>Ask what is missing</h3>
+              <p>No error state, no loading state, no empty state, no keyboard escape, no explanation. Absence is a finding &mdash; often the most important one.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--ink lab-section" id="lab" aria-labelledby="lab-title">
+      <div class="shell">
+        <div class="lab-heading">
+          <div>
+            <p class="eyebrow"><span>02</span> The review lab</p>
+            <h2 id="lab-title">Three snippets. <span class="serif">Find what the demo hides.</span></h2>
+          </div>
+          <p>Read each AI-generated answer, select the review comments that are valid, and submit. There is no timer. There is no account. Just the habit.</p>
+        </div>
+
+        <div class="lab" data-lab>
+          <div class="lab-topbar">
+            <span class="lab-window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="lab-case-label">Review lab / <span class="lab-case-progress" data-lab-counter>01</span> of 03</span>
+          </div>
+
+          <div class="lab-grid">
+            <div class="lab-code-pane">
+              <div class="lab-code-head">
+                <span class="lab-case-title" data-lab-title>Loading case&hellip;</span>
+                <span class="lab-generated" data-lab-file>AI-generated</span>
+              </div>
+              <pre class="lab-code" aria-label="AI-generated code to review"><code data-lab-code></code></pre>
+              <div class="lab-prompt">
+                <p>Prompt</p>
+                <p data-lab-prompt></p>
+              </div>
+            </div>
+
+            <div class="lab-form-pane">
+              <form data-review-form novalidate>
+                <fieldset>
+                  <legend class="lab-legend" data-lab-question>Which review comments are valid?</legend>
+                  <p class="lab-instructions" id="review-instructions">Select all that apply. You will see the full review after you submit.</p>
+                  <div class="review-options" data-review-options aria-describedby="review-instructions"></div>
+                </fieldset>
+                <div class="review-feedback" data-review-feedback aria-live="polite" aria-atomic="true" hidden></div>
+                <div class="lab-actions">
+                  <button class="button" type="submit" data-review-submit disabled>Submit review</button>
+                  <button class="button button--ghost" type="button" data-review-next hidden>Next case &#8594;</button>
+                  <span class="lab-score" data-lab-score aria-live="polite">0 of 8 issues found</span>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="lab-footer">
+            <span>No account. No scoreboard. Just the habit.</span>
+            <span>Review lab <strong>v1.0</strong></span>
+          </div>
+        </div>
+        <noscript>
+          <p class="empty-state">The interactive review lab needs JavaScript. The five-pass method above still gives you the full review framework, and every example is described in the field guide.</p>
+        </noscript>
+
+        <div class="section-foot">
+          <span>Lab score is a teaching device, not a grade.</span>
+          <a class="link-arrow" href="#prompt-recipe">See the prompt recipe <span aria-hidden="true">&#8595;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prompt-recipe" aria-labelledby="prompt-title">
+      <div class="shell">
+        <div class="prompt-layout">
+          <div class="prompt-copy">
+            <p class="eyebrow"><span>03</span> Working with AI</p>
+            <h2 id="prompt-title">Ask better. <span class="serif">Then check harder.</span></h2>
+            <p>AI output is a draft with good manners. A precise prompt narrows the gap between plausible and correct; a review is still what closes it.</p>
+            <div class="principle-card">
+              <blockquote>A prompt is a specification, not a wish.</blockquote>
+              <figcaption>Course principle 02 / Say what done looks like.</figcaption>
+            </div>
+          </div>
+
+          <div class="prompt-recipe">
+            <div class="prompt-step">
+              <span>01</span>
+              <h3>Name the goal</h3>
+              <p>Describe the user, the page, and the outcome. One feature at a time beats an entire website in a single request.</p>
+              <code class="prompt-example">"Build a keyboard-accessible mobile navigation for a four-page portfolio."</code>
+            </div>
+            <div class="prompt-step">
+              <span>02</span>
+              <h3>State the constraints</h3>
+              <p>Say what cannot change: the existing markup, the supported browsers, the size budget, the design system, the technology you are learning.</p>
+              <code class="prompt-example">"Use HTML, CSS, and vanilla JS. Do not add dependencies. Keep the current nav links."</code>
+            </div>
+            <div class="prompt-step">
+              <span>03</span>
+              <h3>Define acceptance</h3>
+              <p>Write the checks before the code exists. Keyboard, focus, empty, error, narrow screen, reduced motion. This is also the review checklist.</p>
+              <code class="prompt-example">"Works at 360px. Escape closes. Focus returns to the toggle. No layout shift."</code>
+            </div>
+            <div class="prompt-step">
+              <span>04</span>
+              <h3>Ask for the assumptions</h3>
+              <p>Make uncertainty visible. Ask what the model is unsure about, what it chose not to do, and which behaviour it could not verify.</p>
+              <code class="prompt-example">"List your assumptions and the edge cases you did not handle before showing the code."</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="review-cta-title">
+      <div class="shell">
+        <div class="curriculum-cta">
+          <div>
+            <p class="eyebrow"><span>04</span> Apply it</p>
+            <h2 id="review-cta-title">Build something. Then review it like it is not yours.</h2>
+            <p>The project brief gives you a real site to practise on. The review habits are what turn a working draft into work you can defend.</p>
+          </div>
+          <a class="button" href="project.html">
+            Open the project brief
+            <span class="button-icon" aria-hidden="true">
+              <svg class="icon-arrow" viewBox="0 0 16 16"><path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Webtech home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 36 36"><path d="M7 10l5 16 6-12 6 12 5-16" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+            </span>
+            <span class="brand-name">webtech<span class="brand-dot">.</span></span>
+          </a>
+          <p class="footer-tagline">A course companion for learning the web in full: the craft of building it, the discipline of shipping it, and the judgment to question it.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h2 class="footer-heading">Explore</h2>
+            <ul>
+              <li><a href="curriculum.html">Curriculum</a></li>
+              <li><a href="project.html">Project brief</a></li>
+              <li><a href="code-review.html">Code review studio</a></li>
+              <li><a href="field-guide.html">Field guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Reference</h2>
+            <ul>
+              <li><a href="https://webtech.landrock.io/" rel="external">Full lesson material</a></li>
+              <li><a href="https://developer.mozilla.org/" rel="external">MDN Web Docs</a></li>
+              <li><a href="https://web.dev/learn" rel="external">web.dev Learn</a></li>
+              <li><a href="https://validator.w3.org/" rel="external">W3C validator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Webtech course companion. An original site built around the course outline.</p>
+        <p>Hand-built with HTML, CSS &amp; JavaScript. No frameworks. No build step.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>
