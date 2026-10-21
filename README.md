@@ -6,6 +6,9 @@ AI. It is deliberately framework-free, and the site itself follows the standards
 teaches: semantic markup, a responsive layout, keyboard-accessible interactions, and
 no build step.
 
+**Live site:** <https://1762585131-cloud.github.io/webtech-course-companion/>  
+**Repository:** <https://github.com/1762585131-cloud/webtech-course-companion>
+
 ## Pages
 
 | File | Purpose |
@@ -57,8 +60,9 @@ stay visible, and the interactive lab is hidden in favour of its explanatory con
 
 ## Deploy
 
-The site is ready for any static host. All internal paths are relative, so it works
-at a domain root or in a project subdirectory.
+The site is published with **GitHub Pages** from the `main` branch at the repository
+root. It is also ready for any other static host: all internal paths are relative, so
+the files work at a domain root or in a project subdirectory.
 
 ### GitHub Pages
 
