@@ -1,0 +1,9 @@
+# Local QA, portable tooling, and packaged download
+.preview/
+.tools/
+webtech-site.zip
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.log
